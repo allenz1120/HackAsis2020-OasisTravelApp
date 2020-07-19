@@ -16,11 +16,11 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "set PORT=8080 && react-scripts start",
+    "prod": "set PORT=8080 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"cd api && npm run start\" \"npm run start\""
+    "start": "concurrently \"cd api && npm run start\" \"npm run prod\""
   },
   "eslintConfig": {
     "extends": "react-app"
