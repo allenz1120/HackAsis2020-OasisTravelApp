@@ -14,7 +14,6 @@ export default class Inputs extends Component {
       location: inLocation,
       interest: inInterest,
     };
-    this.props.handleSearchOption(inLocation, inInterest);
 
     fetch("http://localhost:3000/testAPI", {
       method: "POST",
@@ -24,7 +23,7 @@ export default class Inputs extends Component {
       body: JSON.stringify(json),
     }).then((response) => {
       response.json().then((data) => {
-        this.props.handleVenueData(data);
+        this.props.handleVenueData(data, inInterest);
       });
     });
 
