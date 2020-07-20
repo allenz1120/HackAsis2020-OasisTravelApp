@@ -27,7 +27,7 @@ export default class Map extends Component {
             console.log('ADDING CORONA CIRCLE')
             // create a HTML element for each feature
             var el = document.createElement('div');
-            el.classList.add('marker');
+            el.classList.add('marker-corona');
 
             // make a marker for each feature and add to the map
             new mapboxgl.Marker(el)
@@ -55,48 +55,93 @@ export default class Map extends Component {
         console.log(this.props.geojson)
 
         let interest = this.props.interest;
+        let counter = 0;
 
+        switch (interest) {
+            case 'botanical garden':
+                counter = 1;
+                break;
+            case 'campground':
+                counter = 2;
+                break;
+            case 'dive spot':
+                counter = 3;
+                break;
+            case 'food':
+                counter = 4;
+                break;
+            case 'hospital':
+                counter = 5;
+                break;
+            case 'hotel':
+                counter = 6;
+                break;
+            case 'library':
+                counter = 7;
+                break;
+            case 'monument':
+                counter = 8;
+                break;
+            case 'mountain':
+                counter = 9;
+                break;
+            case 'museum':
+                counter = 10;
+                break;
+            case 'tourist information center':
+                counter = 11;
+                break;
+            case 'waterfront':
+                counter = 12;
+                break;
+            default:
+                break;
+
+        }
+        let el = [];
         this.props.geojson.forEach(function (marker) {
-            console.log('looking at ' + marker.name + ' at location ' + [marker.location.lat, marker.location.lng])
+            console.log('looking at ' + marker.name + ' at location ' + [marker.location.lat, marker.location.lng] + ' and we are on counter number ', counter)
             // create a HTML element for each feature
-            const el = document.createElement('div');
+
+
+            el[counter] = document.createElement('div');
 
             switch (interest) {
                 case 'botanical garden':
-                    el.classList.add('marker-botanical');
+                    el[counter].classList.add('marker-botanical');
                     break;
                 case 'campground':
-                    el.classList.add('marker-campground');
+                    el[counter].classList.add('marker-campground');
                     break;
                 case 'dive spot':
-                    el.classList.add('marker-dive');
+                    el[counter].classList.add('marker-dive');
                     break;
                 case 'food':
-                    el.classList.add('marker-food');
+                    el[counter].classList.add('marker-food');
                     break;
                 case 'hospital':
-                    el.classList.add('marker-hospital');
+                    el[counter].classList.add('marker-hospital');
                     break;
                 case 'hotel':
-                    el.classList.add('marker-hotel');
+                    el[counter].classList.add('marker-hotel');
                     break;
                 case 'library':
-                    el.classList.add('marker-library');
+                    el[counter].classList.add('marker-library');
                     break;
                 case 'monument':
-                    el.classList.add('marker-monument');
+                    el[counter].classList.add('marker-monument');
                     break;
                 case 'mountain':
-                    el.classList.add('marker-mountain');
+                    el[counter].classList.add('marker-mountain');
                     break;
                 case 'museum':
-                    el.classList.add('marker-museum');
+                    el[counter].classList.add('marker-museum');
                     break;
                 case 'tourist information center':
-                    el.classList.add('marker-tourist');
+                    el[counter].classList.add('marker-tourist');
                     break;
                 case 'waterfront':
-                    el.classList.add('marker-waterfront');
+                    el[counter].classList.add('marker-waterfront');
                     break;
                 default:
                     break;
@@ -107,7 +152,7 @@ export default class Map extends Component {
 
 
 
-            new mapboxgl.Marker(el)
+            new mapboxgl.Marker(el[counter])
                 .setLngLat([marker.location.lng, marker.location.lat])
                 .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
                     .setHTML('<h3>' + marker.name + '</h3><button>Add to Experience</button>'))

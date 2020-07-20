@@ -5,6 +5,14 @@
     // margin-top:$m-size;
 }
 .marker {
+
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+}
+.marker-corona {
   background:red;
   background-size: cover;
   width: 40px;
