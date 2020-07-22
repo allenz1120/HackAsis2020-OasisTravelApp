@@ -13,14 +13,17 @@
     "postman-request": "^2.88.1-postman.23",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "set PORT=8080 && react-scripts start",
+    "react": "set PORT=8080 && react-scripts start",
+    "express": "cd api && npm run start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"cd api && npm run start\" \"npm run start\""
+    "start": "npm run express && npm run react",
+    "dev": "concurrently \"npm run express\" \"npm run react\""
   },
   "eslintConfig": {
     "extends": "react-app"

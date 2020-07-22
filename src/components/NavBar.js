@@ -6,9 +6,9 @@ const NavBar = () => {
         <div>
             <nav id="hiddenNav" className="navbar navbar-expand-md navbar-light fixed-top hideNav ml-auto">
                 <div className="navbar-nav ml-auto">
-                    <a className="nav-item nav-link" href="#inputss">Map</a>
-                    {/* <a className="nav-item nav-link" href="#about">About Us</a> */}
-                    <a className="nav-item nav-link" href="#sticky-footer">Contact Us</a>
+                    <a className="nav-item nav-link" href="/">Map</a>
+                    <a className="nav-item nav-link" href="/about">About Us</a>
+                    {/* <a className="nav-item nav-link" href="#sticky-footer">Contact Us</a> */}
                 </div>
             </nav>
 
@@ -19,9 +19,9 @@ const NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ml-auto">
-                        <a data-content="Map" className="nav-item nav-link" href="#inputss" aria-hidden="true">Map</a>
-                        {/* <a data-content="About Us" className="nav-item nav-link" href="#about" aria-hidden="true">About Us</a> */}
-                        <a data-content="Contact Us" className="nav-item nav-link" href="#sticky-footer" aria-hidden="true">Contact Us</a>
+                        <a data-content="Map" className="nav-item nav-link" href="/" aria-hidden="true">Map</a>
+                        <a data-content="About Us" className="nav-item nav-link" href="/about" aria-hidden="true">About Us</a>
+                        {/* <a data-content="Contact Us" className="nav-item nav-link" href="#sticky-footer" aria-hidden="true">Contact Us</a> */}
                     </div>
                 </div>
             </nav>

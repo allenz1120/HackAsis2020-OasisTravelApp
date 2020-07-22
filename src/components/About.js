@@ -1,28 +1,73 @@
 import React from "react";
+import Navbar from './NavBar';
+import Footer from './Footer';
+import Harsh from './../static/Harsh.jpg';
+import Ibrahim from './../static/Ibrahim.jpg';
+import Brian from './../static/Brian.jpg';
+import Alex from './../static/Alex.JPG';
+import Allen from './../static/Allen.JPG';
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 const About = () => {
     return (
         <div>
-            <div class="row">
-                <div class="col-lg-4 text-center">
-                    <img class="rounded-circle" src="https://i.imgur.com/ET0l6GU.jpg" alt="Generic placeholder image" width="200" height="200"></img>
+            <Navbar />
+            <div className="row textArea">
+                <div className="col-lg-4 text-center">
+                    <img className="rounded-circle" src={Brian} alt="Generic placeholder image" width="200" height="200"></img>
+                    <div>
+                        <div className="row bio">
+                            <p className='name'>Brian Jung, Boston University 2022</p>
+                            <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/brian-jung-b85373198/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
+                        </div>
+                        <p>Biomedical Engineer</p>
+                    </div>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <img class="rounded-circle" src="https://i.imgur.com/z87lcoA.jpg" alt="Generic placeholder image" width="200" height="200"></img>
+                <div className="col-lg-4 text-center">
+                    <img className="rounded-circle" src={Harsh} alt="Generic placeholder image" width="200" height="200"></img>
+                    <div>
+                        <div className="row bio">
+                            <p className='name'>Harsh Hemlani, Boston University 2022</p>
+                            <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/harsh-hemlani/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
+                        </div>
+                        <p>Mechanical Engineer</p>
+                    </div>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <img class="rounded-circle" src="https://i.imgur.com/FcmAYtx.png" alt="Generic placeholder image" width="200" height="200"></img>
+                <div className="col-lg-4 text-center">
+                    <img className="rounded-circle" src={Alex} alt="Generic placeholder image" width="200" height="200"></img>
+
+                    <div>
+                        <div className="row bio">
+                            <p className='name'>Alex Prior, Boston University 2022</p>
+                            <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/alexjprior/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
+                        </div>
+                        <p>Computer Engineer</p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 text-center">
-                    <img class="rounded-circle" src="https://i.imgur.com/k2l7w8Z.jpg" alt="Generic placeholder image" width="200" height="200"></img>
+            <div className="row">
+                <div className="col-lg-6 text-center">
+                    <img className="rounded-circle" src={Allen} alt="Generic placeholder image" width="200" height="200"></img>
+                    <div>
+                        <div className="row bio">
+                            <p className='name'>Allen Zou, Boston University 2022</p>
+                            <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/allen-zou/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
+                        </div>
+                        <p>Computer Engineer</p>
+                    </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <img class="rounded-circle" src="https://i.imgur.com/BqXqr9e.jpg" alt="Generic placeholder image" width="200" height="200"></img>
+                <div className="col-lg-6 text-center">
+                    <img className="rounded-circle" src={Ibrahim} alt="Generic placeholder image" width="200" height="200"></img>
+                    <div>
+                        <div className="row bio">
+                            <p className='name'>Ibrahim Chand, Boston University 2022</p>
+                            <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/ichand/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
+                        </div>
+                        <p>Computer Engineer</p>
+                    </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
