@@ -5,13 +5,6 @@ import { coronaData } from './../static/coronaData';
 const mapboxgl = window.mapboxgl;
 let map;
 export default class Map extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         location: [-71.087574, 42.351231],
-    //         venues: []
-    //     }
-    // }
 
     initMap = () => {
 
@@ -58,7 +51,6 @@ export default class Map extends Component {
         let interest = this.props.interest;
         let el;
 
-        console.log('el is ' + el)
 
         this.props.geojson.forEach(function (marker) {
             console.log('looking at ' + marker.name + ' at location ' + [marker.location.lat, marker.location.lng])

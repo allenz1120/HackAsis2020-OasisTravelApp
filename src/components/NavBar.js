@@ -8,6 +8,7 @@ const NavBar = () => {
                 <div className="navbar-nav ml-auto">
                     <a className="nav-item nav-link" href="/">Map</a>
                     <a className="nav-item nav-link" href="/about">About Us</a>
+                    <a className="nav-item nav-link" href="experience">Itinerary</a>
                     {/* <a className="nav-item nav-link" href="#sticky-footer">Contact Us</a> */}
                 </div>
             </nav>
@@ -21,6 +22,7 @@ const NavBar = () => {
                     <div className="navbar-nav ml-auto">
                         <a data-content="Map" className="nav-item nav-link" href="/" aria-hidden="true">Map</a>
                         <a data-content="About Us" className="nav-item nav-link" href="/about" aria-hidden="true">About Us</a>
+                        <a data-content="Contact Us" className="nav-item nav-link" href="/experience" aria-hidden="true">Itinerary</a>
                         {/* <a data-content="Contact Us" className="nav-item nav-link" href="#sticky-footer" aria-hidden="true">Contact Us</a> */}
                     </div>
                 </div>

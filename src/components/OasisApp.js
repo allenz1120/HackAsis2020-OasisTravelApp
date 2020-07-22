@@ -3,8 +3,6 @@ import NavBar from "./NavBar"; //ADDED - NavBar
 import Jumbotron from "./Jumbotron";
 import Inputs from "./Inputs";
 import Map from "./Map";
-import Boston from "./Boston";
-import HongKong from "./HongKong";
 // import About from "./About"
 import Footer from "./Footer";
 
@@ -49,8 +47,6 @@ export default class OasisApp extends React.Component {
           location={this.state.location}
           interest={this.state.interest} />
         {/* <p className="App-intro">{this.state.apiResponse}</p> */}
-        <Boston />
-        <HongKong />
         <Footer />
       </div>
     );
