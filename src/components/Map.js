@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { coronaData } from './../static/coronaData';
-// import photo from './../static/botanical.png';
+import { coronaData } from './../static/coronaData.js';
 
 const mapboxgl = window.mapboxgl;
 let map;
@@ -14,7 +13,7 @@ export default class Map extends Component {
             style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
             // center: [114.1694, 22.4060], // starting position [lng, lat]
             center: this.props.location,
-            zoom: 11 // starting zoom
+            zoom: 12 // starting zoom
         });
         console.log('initalization of map')
         coronaData.forEach(function (marker) {
@@ -22,13 +21,40 @@ export default class Map extends Component {
             // create a HTML element for each feature
             var el = document.createElement('div');
             el.classList.add('marker-corona');
+            if (marker.Incidence_Rate === 0) {
+                el.style.setProperty("--corona-width", "0px")
+            }
+            else if (marker.Incidence_Rate > 1000) {
+                el.style.setProperty("--corona-width", "100px")
+            }
+            else if (marker.Incidence_Rate > 500) {
+                el.style.setProperty("--corona-width", "50px")
+            }
+            else if (marker.Incidence_Rate > 0) {
+                el.style.setProperty("--corona-width", "20px")
+            }
+
+            // if (marker.Incidence_Rate === 0) {
+            //     el.style.setProperty("--corona-width", 0)
+            //     el.style.setProperty("--corona-height", 0)
+            // }
+            // else if (marker.Incidence_Rate > 1000) {
+            //     el.style.setProperty("--corona-width", 100)
+            //     el.style.setProperty("--corona-height", 100)
+            // }
+            // else if (marker.Incidence_Rate < 1000) {
+            //     el.style.setProperty("--corona-width", 50)
+            //     el.style.setProperty("--corona-height", 50)
+            // }
+
 
             // make a marker for each feature and add to the map
             new mapboxgl.Marker(el)
-                .setLngLat(marker)
+                .setLngLat([marker.Long_, marker.Lat])
                 .addTo(map);
 
-        });
+        }
+        );
     }
 
     componentDidMount() {

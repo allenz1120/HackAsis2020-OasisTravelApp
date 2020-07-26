@@ -8,13 +8,15 @@ import Alex from './../static/Alex.JPG';
 import Allen from './../static/Allen.JPG';
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
+
+
 const About = () => {
     return (
-        <div>
+        <div className='about'>
             <Navbar />
             <div className="row textArea">
                 <div className="col-lg-4 text-center">
-                    <img className="rounded-circle" src={Brian} alt="Generic placeholder image" width="200" height="200"></img>
+                    <img className="rounded-circle" src={Brian} alt="Generic placeholder" width="200" height="200"></img>
                     <div>
                         <div className="row bio">
                             <p className='name'>Brian Jung, Boston University 2022</p>
@@ -24,7 +26,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 text-center">
-                    <img className="rounded-circle" src={Harsh} alt="Generic placeholder image" width="200" height="200"></img>
+                    <img className="rounded-circle" src={Harsh} alt="Generic placeholder" width="200" height="200"></img>
                     <div>
                         <div className="row bio">
                             <p className='name'>Harsh Hemlani, Boston University 2022</p>
@@ -34,7 +36,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 text-center">
-                    <img className="rounded-circle" src={Alex} alt="Generic placeholder image" width="200" height="200"></img>
+                    <img className="rounded-circle" src={Alex} alt="Generic placeholder" width="200" height="200"></img>
 
                     <div>
                         <div className="row bio">
@@ -47,7 +49,7 @@ const About = () => {
             </div>
             <div className="row">
                 <div className="col-lg-6 text-center">
-                    <img className="rounded-circle" src={Allen} alt="Generic placeholder image" width="200" height="200"></img>
+                    <img className="rounded-circle" src={Allen} alt="Generic placeholder" width="200" height="200"></img>
                     <div>
                         <div className="row bio">
                             <p className='name'>Allen Zou, Boston University 2022</p>
@@ -57,7 +59,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-lg-6 text-center">
-                    <img className="rounded-circle" src={Ibrahim} alt="Generic placeholder image" width="200" height="200"></img>
+                    <img className="rounded-circle" src={Ibrahim} alt="Generic placeholder" width="200" height="200"></img>
                     <div>
                         <div className="row bio">
                             <p className='name'>Ibrahim Chand, Boston University 2022</p>
