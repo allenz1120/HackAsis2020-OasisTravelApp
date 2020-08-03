@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import { coronaData } from './../static/coronaData';
+import { coronaData } from './../static/coronaData.js';
 
 const mapboxgl = window.mapboxgl;
 let map;
 export default class Map extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            location: [-71.087574, 42.351231],
-            venues: []
-        }
-    }
 
     initMap = () => {
 
@@ -20,21 +13,48 @@ export default class Map extends Component {
             style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
             // center: [114.1694, 22.4060], // starting position [lng, lat]
             center: this.props.location,
-            zoom: 11 // starting zoom
+            zoom: 12 // starting zoom
         });
         console.log('initalization of map')
         coronaData.forEach(function (marker) {
             console.log('ADDING CORONA CIRCLE')
             // create a HTML element for each feature
             var el = document.createElement('div');
-            el.classList.add('marker');
+            el.classList.add('marker-corona');
+            if (marker.Incidence_Rate === 0) {
+                el.style.setProperty("--corona-width", "0px")
+            }
+            else if (marker.Incidence_Rate > 1000) {
+                el.style.setProperty("--corona-width", "100px")
+            }
+            else if (marker.Incidence_Rate > 500) {
+                el.style.setProperty("--corona-width", "50px")
+            }
+            else if (marker.Incidence_Rate > 0) {
+                el.style.setProperty("--corona-width", "20px")
+            }
+
+            // if (marker.Incidence_Rate === 0) {
+            //     el.style.setProperty("--corona-width", 0)
+            //     el.style.setProperty("--corona-height", 0)
+            // }
+            // else if (marker.Incidence_Rate > 1000) {
+            //     el.style.setProperty("--corona-width", 100)
+            //     el.style.setProperty("--corona-height", 100)
+            // }
+            // else if (marker.Incidence_Rate < 1000) {
+            //     el.style.setProperty("--corona-width", 50)
+            //     el.style.setProperty("--corona-height", 50)
+            // }
+
 
             // make a marker for each feature and add to the map
             new mapboxgl.Marker(el)
-                .setLngLat(marker)
+                .setLngLat([marker.Long_, marker.Lat])
                 .addTo(map);
 
-        });
+        }
+        );
     }
 
     componentDidMount() {
@@ -55,11 +75,14 @@ export default class Map extends Component {
         console.log(this.props.geojson)
 
         let interest = this.props.interest;
+        let el;
+
 
         this.props.geojson.forEach(function (marker) {
             console.log('looking at ' + marker.name + ' at location ' + [marker.location.lat, marker.location.lng])
             // create a HTML element for each feature
-            const el = document.createElement('div');
+
+            el = document.createElement('div');
 
             switch (interest) {
                 case 'botanical garden':
@@ -102,19 +125,17 @@ export default class Map extends Component {
                     break;
 
             }
-            console.log('INTEREST HERE IS', interest)
+            console.log('INTEREST HERE IS', interest, 'and the el list is', el)
 
 
 
 
             new mapboxgl.Marker(el)
                 .setLngLat([marker.location.lng, marker.location.lat])
+
                 .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
                     .setHTML('<h3>' + marker.name + '</h3><button>Add to Experience</button>'))
                 .addTo(map);
-
-
-
         });
     }
 

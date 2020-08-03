@@ -1,14 +1,22 @@
 .map{
     width: 100%; 
-    height:330px;
+    height:500px;
     // margin-bottom: $m-size;
     // margin-top:$m-size;
 }
 .marker {
-  background:red;
+
   background-size: cover;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+
+}
+.marker-corona {
+  background:red;
+  background-size: cover;
+  width: var(--corona-width);
+  height: var(--corona-width);
   border-radius: 50%;
   opacity:50%;
 }
