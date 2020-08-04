@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/161f37d8-356b-44ce-a615-e6098a5505dc/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/oasistravel",
+    "appService.deploySubpath": "."
+}

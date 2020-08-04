@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.5.0",
+    "concurrently": "^5.2.0",
     "d3": "^5.16.0",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
@@ -18,15 +19,13 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-
     "react": "set PORT=8080 && react-scripts start",
     "express": "cd api && npm run start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "npm run express && npm run react",
-    "dev": "concurrently \"npm run express\" \"npm run react\""
-
+    "random": "npm run express && npm run react",
+    "start": "concurrently \"npm run react\" "
   },
   "eslintConfig": {
     "extends": "react-app"
