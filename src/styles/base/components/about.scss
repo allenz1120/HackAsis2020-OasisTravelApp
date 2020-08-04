@@ -1,13 +1,10 @@
-
-
-.textArea{
-    padding:$m-size 0;
-    
+.about {
+    background-color: rgb(252,227,138);
+    color: rgb(63,193,201); 
 }
 
-#p{
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1.5em;
+.textArea{
+    padding:$m-size 0;  
 }
 
 .logo{
@@ -20,5 +17,12 @@
 }
 
 .name{
+    font-family: 'PT Sans', sans-serif;
     margin: auto 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.bottom {
+    margin-bottom:450px;
 }

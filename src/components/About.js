@@ -22,7 +22,7 @@ const About = () => {
                             <p className='name'>Brian Jung, Boston University 2022</p>
                             <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/brian-jung-b85373198/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
                         </div>
-                        <p>Biomedical Engineer</p>
+                        <p className="name">Biomedical Engineer</p>
                     </div>
                 </div>
                 <div className="col-lg-4 text-center">
@@ -32,7 +32,7 @@ const About = () => {
                             <p className='name'>Harsh Hemlani, Boston University 2022</p>
                             <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/harsh-hemlani/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
                         </div>
-                        <p>Mechanical Engineer</p>
+                        <p className="name">Mechanical Engineer</p>
                     </div>
                 </div>
                 <div className="col-lg-4 text-center">
@@ -43,11 +43,11 @@ const About = () => {
                             <p className='name'>Alex Prior, Boston University 2022</p>
                             <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/alexjprior/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
                         </div>
-                        <p>Computer Engineer</p>
+                        <p className="name">Computer Engineer</p>
                     </div>
                 </div>
             </div>
-            <div className="row">
+            <div className="row bottom">
                 <div className="col-lg-6 text-center">
                     <img className="rounded-circle" src={Allen} alt="Generic placeholder" width="200" height="200"></img>
                     <div>
@@ -55,7 +55,7 @@ const About = () => {
                             <p className='name'>Allen Zou, Boston University 2022</p>
                             <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/allen-zou/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
                         </div>
-                        <p>Computer Engineer</p>
+                        <p className="name">Computer Engineer</p>
                     </div>
                 </div>
                 <div className="col-lg-6 text-center">
@@ -65,7 +65,7 @@ const About = () => {
                             <p className='name'>Ibrahim Chand, Boston University 2022</p>
                             <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/ichand/'><img src={require('./../static/linkedin.svg')} className='logo' fluid /></a>
                         </div>
-                        <p>Computer Engineer</p>
+                        <p className="name">Computer Engineer</p>
                     </div>
                 </div>
             </div>

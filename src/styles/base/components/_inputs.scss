@@ -1,38 +1,96 @@
-#search {
-    font-size: 0.7em;
-    font-style: italic;
-    color: rgb(63,193,201);
-    border: 1px solid rgb(63,193,201);
+/* Extra Small - <576px */
+@media (min-width: 0px) {
+    #search {
+        font-size: 0.7em;
+        font-style: italic;
+        color: rgb(63,193,201);
+        border: 1px solid rgb(63,193,201);
+        width: 100%;
+        
+    }
+
+    #search:hover {
+        background-color: rgb(63,193,201);
+        color: white;
+    }
+
+    .searchBtn {
+        // padding-top: -50px;
+        
+    }
+
+    .form-row {
+        // line-height: 1em;
+    }
+
+    .labelInt {
+        margin-bottom: 0;
+    }
+
+    .form-inline {
+        background-color: rgb(252,227,138);
+        color: rgb(63,193,201);
+        font-size: 1.5em;
+        font-style: italic;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+
+    .form-control {
+        font-size: 0.7em;
+        color: rgb(63,193,201);
+
+        border: 1px solid rgb(63,193,201);
+    }
+
+    .form-control::placeholder {
+        color: rgb(63,193,201);
+    }
 }
 
-#search:hover {
-    background-color: rgb(63,193,201);
-    color: white;
+/* Small - <768px */ 
+@media (min-width: 576px) {
+
 }
 
-.form-inline {
-    background-color: rgb(252,227,138);
-    color: rgb(63,193,201);
-    font-size: 1.5em;
-    font-style: italic;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+/* Medium - <992px */
+@media (min-width: 768px) {
+    #search {
+        font-size: 0.7em;
+    }
+
+    .form-inline {
+        font-size: 1.5em;
+    }
+
+    .form-control {
+        font-size: 0.7em;
+    }
 }
 
-.form-control {
-    font-size: 0.7em;
-    color: rgb(63,193,201);
-    
-    border: 1px solid rgb(63,193,201);
+/* Large - <1200px */
+@media (min-width: 992px) {
+    #search {
+        font-size: 0.8em;
+    }
+
+    .form-inline {
+        font-size: 1.6em;
+    }
+
+    .form-control {
+        font-size: 0.8em;
+    }
 }
 
-.form-control::placeholder {
-    color: rgb(63,193,201);
-  }
+/* Extra Large - >1200px */
+@media (min-width: 1200px) {
 
-// .btn-primary {
-//     background: rgb(63,193,201);
-//     border-color: rgb(63,193,201);
-// }
+}

@@ -3,7 +3,7 @@ import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"; //ADDED - JS for
 
 const Footer = () => {
     return (
-        <footer id="sticky-footer" className="py-4">
+        <footer id="sticky-footer" className="py-4 text-center">
             <div className="row">
                 <div className="container text-center col-md-6">
                     <small>Copyright &copy; Oasis</small>
