@@ -1,28 +1,29 @@
 .about {
-    background-color: rgb(252,227,138);
-    color: rgb(63,193,201); 
+  background-color: rgb(252, 227, 138);
+  color: rgb(63, 193, 201);
+  width: 100%;
 }
 
-.textArea{
-    padding:$m-size 0;  
+.textArea {
+  padding: $m-size 0;
 }
 
-.logo{
-    height: 30px;
-    margin: 10px;
+.logo {
+  height: 30px;
+  margin: 10px;
 }
 
-.bio{
-    justify-content: center;
+.bio {
+  justify-content: center;
 }
 
-.name{
-    font-family: 'PT Sans', sans-serif;
-    margin: auto 0;
-    font-size: 1.5em;
-    font-weight: 600;
+.name {
+  font-family: "PT Sans", sans-serif;
+  margin: auto 0;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .bottom {
-    margin-bottom:450px;
+  margin-bottom: 400px;
 }

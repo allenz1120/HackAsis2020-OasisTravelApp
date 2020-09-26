@@ -1,24 +1,22 @@
-.map{
-    width: 100%; 
-    height:600px;
-    // margin-bottom: $m-size;
-    // margin-top:$m-size;
+.map {
+  width: 100%;
+  height: 600px;
+  // margin-bottom: $m-size;
+  // margin-top:$m-size;
 }
 .marker {
-
   background-size: cover;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-
 }
 .marker-corona {
-  background:red;
+  background: red;
   background-size: cover;
   width: var(--corona-width);
   height: var(--corona-width);
+  opacity: 0.5;
   border-radius: 50%;
-  opacity:50%;
 }
 .marker-botanical {
   //Icon by Freepik: https://www.flaticon.com/authors/freepik
@@ -42,7 +40,7 @@
   //Icon by Freepik: https://www.flaticon.com/authors/freepik
   background-image: url(https://media.discordapp.net/attachments/686755046456557581/730269589371617390/scuba-diving.png);
   background-size: cover;
-  width: 40px; 
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
@@ -69,7 +67,7 @@
   //Icon by Freepik: https://www.flaticon.com/authors/freepik
   background-image: url(https://media.discordapp.net/attachments/686755046456557581/730269722347569232/hotel.png);
   background-size: cover;
-  width: 40px; 
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
@@ -96,7 +94,7 @@
   //Icon by Freepik: https://www.flaticon.com/authors/freepik
   background-image: url(https://media.discordapp.net/attachments/713813067300864050/730235161605832724/adventure.png);
   background-size: cover;
-  width: 40px; 
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
@@ -105,7 +103,7 @@
   //Icon by Freepik: https://www.flaticon.com/authors/freepik
   background-image: url(https://media.discordapp.net/attachments/686755046456557581/730267104510738442/cultures.png);
   background-size: cover;
-  width: 40px; 
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
@@ -128,15 +126,12 @@
   border-radius: 50%;
   cursor: pointer;
 }
-        
 
-     
 .mapboxgl-popup {
-        max-width: 200px;
-      }
-      
+  max-width: 200px;
+}
+
 .mapboxgl-popup-content {
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-      }
-      
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}

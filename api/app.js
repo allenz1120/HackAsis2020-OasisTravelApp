@@ -32,7 +32,9 @@ app.post("/testAPI", function (req, res) {
           error,
         });
       }
-      console.log('longitude is ' + longitude + ' and longitude is ' + longitude)
+      console.log(
+        "longitude is " + longitude + " and longitude is " + longitude
+      );
       venues(
         latitude.toString(),
         longitude.toString(),
@@ -54,7 +56,11 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, "../build")));
+// Serve the static files from the React app
+app.use("/about", express.static(path.join(__dirname, "../build")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
